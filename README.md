@@ -1,7 +1,7 @@
 delight-server
 ==========
 
-[![Build Status](https://travis-ci.org/mxro/server-api.svg?branch=master)](https://travis-ci.org/mxro/server-api)
+[![Build Status](https://travis-ci.org/javadelight/delight-server.svg)](https://travis-ci.org/javadelight/delight-server)
 
 An abstract API for the management of servers.
 
