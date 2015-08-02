@@ -5,7 +5,6 @@ import delight.factories.FactoryCollection;
 import java.util.ArrayList;
 import java.util.List;
 
-import de.mxro.server.contexts.LogCallback;
 import de.mxro.server.internal.DefaultComponentManager;
 import de.mxro.server.manager.ComponentManager;
 import de.mxro.service.callbacks.ShutdownCallback;
@@ -26,21 +25,6 @@ public class ServerApi {
     public static ComponentManager createManager(final FactoryCollection factories) {
         return new DefaultComponentManager(factories);
 
-    }
-
-    public static LogCallback logCallback(final Object source) {
-        return new LogCallback() {
-
-            @Override
-            public void onLogged() {
-
-            }
-
-            @Override
-            public void onFailure(final Throwable t) {
-                throw new RuntimeException("Log call failed from: " + source, t);
-            }
-        };
     }
 
     public static void performShutdown(final List<ServerComponent> toShutdown, final ShutdownCallback callback) {
