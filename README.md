@@ -9,8 +9,8 @@ For news and infos check [maxrohde.com](http://maxrohde.com).
 
 ## Maven Reports
 
-- [All Reports](http://modules.appjangle.com/server-api/latest/project-reports.html)
-- [Dependencies](http://modules.appjangle.com/server-api/latest/dependencies.html)
+- [All Reports](http://modules.appjangle.com/delight-server/latest/project-reports.html)
+- [Dependencies](http://modules.appjangle.com/delight-server/latest/dependencies.html)
 
 ## Used by
 
