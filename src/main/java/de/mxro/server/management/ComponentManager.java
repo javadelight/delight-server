@@ -1,4 +1,4 @@
-package de.mxro.server.manager;
+package de.mxro.server.management;
 
 import delight.async.callbacks.SimpleCallback;
 

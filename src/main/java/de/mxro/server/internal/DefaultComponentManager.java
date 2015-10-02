@@ -12,7 +12,7 @@ import de.mxro.server.ComponentConfiguration;
 import de.mxro.server.ComponentContext;
 import de.mxro.server.ComponentDependencies;
 import de.mxro.server.ServerComponent;
-import de.mxro.server.manager.ComponentManager;
+import de.mxro.server.management.ComponentManager;
 import de.mxro.service.callbacks.ShutdownCallback;
 
 public class DefaultComponentManager implements ComponentManager {

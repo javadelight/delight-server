@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import de.mxro.server.internal.DefaultComponentManager;
-import de.mxro.server.manager.ComponentManager;
+import de.mxro.server.management.ComponentManager;
 import de.mxro.service.callbacks.ShutdownCallback;
 
 public class ServerApi {
