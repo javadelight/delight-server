@@ -11,6 +11,8 @@ import de.mxro.service.callbacks.ShutdownCallback;
 
 public class ServerApi {
 
+    private final static boolean ENABLE_LOG = false;
+
     /**
      * <p>
      * A default manager for components.
@@ -31,10 +33,17 @@ public class ServerApi {
 
         if (toShutdown.size() == 0) {
             callback.onSuccess();
+            if (ENABLE_LOG) {
+                System.out.println(ServerApi.class + ": Shutdown complete.");
+            }
             return;
         }
 
         final ServerComponent server = toShutdown.get(0);
+
+        if (ENABLE_LOG) {
+            System.out.println(ServerApi.class + ": Shutting down " + server);
+        }
         toShutdown.remove(0);
 
         final List<ServerComponent> remainingServers = new ArrayList<ServerComponent>(toShutdown);
@@ -42,6 +51,9 @@ public class ServerApi {
 
             @Override
             public void onSuccess() {
+                if (ENABLE_LOG) {
+                    System.out.println(ServerApi.class + ": Shut  down " + server);
+                }
                 performShutdown(remainingServers, callback);
             }
 
