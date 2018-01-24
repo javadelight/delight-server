@@ -58,7 +58,8 @@ public class ServerApi {
 								return;
 							}
 							failed.set(true);
-							callback.onFailure(new Exception("Component not shut down in timeout: "+c));
+							Log.warn(this+": Component not shut down in timeout: "+c);
+							callback.onSuccess(Success.INSTANCE);
 						}
 					});
 					
@@ -67,11 +68,12 @@ public class ServerApi {
 						@Override
 						public void onFailure(Throwable t) {
 							if (failed.get()) {
-								Log.warn("Component shutdown failed. Excpetion reported: "+t.getMessage(), t);
+								Log.warn(this+": Component shutdown failed. Exception reported: "+t.getMessage(), t);
 								return;
 							}
 							succeeded.set(true);
 							timer.stop();
+							callback.onFailure(t);
 						}
 						
 						@Override
