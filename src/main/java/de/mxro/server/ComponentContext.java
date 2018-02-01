@@ -21,6 +21,4 @@ public interface ComponentContext {
 
     public PropertyNode state();
 
-    public PropertyNode logs();
-
 }
