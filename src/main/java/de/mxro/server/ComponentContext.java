@@ -18,7 +18,8 @@ public interface ComponentContext {
     public ServiceRegistry services();
 
     public PropertyNode metrics();
-
+    
     public PropertyNode state();
+
 
 }
